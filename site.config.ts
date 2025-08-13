@@ -2,7 +2,7 @@ import { defineSiteConfig } from 'valaxy'
 
 export default defineSiteConfig({
   timezone: "Asia/Shanghai",
-  url: "https://mixdmatches.github.io/fan-home/",
+  url: "https://mixdmatches.github.io/",
   lang: "zh-CN",
   title: "下饭小窝",
   author: {
