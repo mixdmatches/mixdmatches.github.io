@@ -5,5 +5,3 @@ description: 下饭的音乐
 links: https://www.yunyoujun.cn/friends/links.json
 random: true
 ---
-
-<YunLinks :links="frontmatter.links" :random="frontmatter.random" />

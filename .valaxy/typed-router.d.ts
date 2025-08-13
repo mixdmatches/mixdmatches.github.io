@@ -23,9 +23,11 @@ declare module 'vue-router/auto-routes' {
     '/404': RouteRecordInfo<'/404', '/404', Record<never, never>, Record<never, never>>,
     '/about/': RouteRecordInfo<'/about/', '/about', Record<never, never>, Record<never, never>>,
     '/about/site': RouteRecordInfo<'/about/site', '/about/site', Record<never, never>, Record<never, never>>,
+    '/anime-character/': RouteRecordInfo<'/anime-character/', '/anime-character', Record<never, never>, Record<never, never>>,
     '/archives/': RouteRecordInfo<'/archives/', '/archives', Record<never, never>, Record<never, never>>,
     '/books/': RouteRecordInfo<'/books/', '/books', Record<never, never>, Record<never, never>>,
     '/categories/': RouteRecordInfo<'/categories/', '/categories', Record<never, never>, Record<never, never>>,
+    '/musics/': RouteRecordInfo<'/musics/', '/musics', Record<never, never>, Record<never, never>>,
     '/page/[page]': RouteRecordInfo<'/page/[page]', '/page/:page', { page: ParamValue<true> }, { page: ParamValue<false> }>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
     '/posts/fifth-interview': RouteRecordInfo<'/posts/fifth-interview', '/posts/fifth-interview', Record<never, never>, Record<never, never>>,
@@ -34,6 +36,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/hello-valaxy': RouteRecordInfo<'/posts/hello-valaxy', '/posts/hello-valaxy', Record<never, never>, Record<never, never>>,
     '/posts/second-interview': RouteRecordInfo<'/posts/second-interview', '/posts/second-interview', Record<never, never>, Record<never, never>>,
     '/posts/third-interview': RouteRecordInfo<'/posts/third-interview', '/posts/third-interview', Record<never, never>, Record<never, never>>,
+    '/projects/': RouteRecordInfo<'/projects/', '/projects', Record<never, never>, Record<never, never>>,
     '/tags/': RouteRecordInfo<'/tags/', '/tags', Record<never, never>, Record<never, never>>,
   }
 
@@ -68,6 +71,10 @@ declare module 'vue-router/auto-routes' {
       routes: '/about/site'
       views: never
     }
+    'pages/anime-character/index.md': {
+      routes: '/anime-character/'
+      views: never
+    }
     'pages/archives/index.md': {
       routes: '/archives/'
       views: never
@@ -78,6 +85,10 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/categories/index.md': {
       routes: '/categories/'
+      views: never
+    }
+    'pages/musics/index.md': {
+      routes: '/musics/'
       views: never
     }
     'node_modules/.pnpm/valaxy-theme-yun@0.26.2_vue@3.5.18_typescript@5.9.2_/node_modules/valaxy-theme-yun/pages/page/[page].vue': {
@@ -110,6 +121,10 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/posts/third-interview.md': {
       routes: '/posts/third-interview'
+      views: never
+    }
+    'pages/projects/index.md': {
+      routes: '/projects/'
       views: never
     }
     'pages/tags/index.md': {

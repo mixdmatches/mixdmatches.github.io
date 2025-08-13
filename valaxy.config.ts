@@ -30,16 +30,16 @@ export default defineValaxyConfig<UserThemeConfig>({
 
     pages: [
       {
-        name: "我的书单",
-        url: "/books/",
-        icon: "i-ri-genderless-line",
-        color: "dodgerblue",
+        name: "我的项目",
+        url: "/projects/",
+        icon: "i-ri-gallery-view",
+        color: "#6e5494",
       },
       {
-        name: "喜欢的音乐",
-        url: "/musics/",
-        icon: "i-ri-women-line",
-        color: "hotpink",
+        name: "喜欢的纸片人",
+        url: "/anime-character/",
+        icon: "i-ri-heart-line",
+        color: "dodgerblue",
       },
     ],
 

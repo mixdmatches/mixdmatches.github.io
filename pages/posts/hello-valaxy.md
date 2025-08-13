@@ -1,8 +1,10 @@
 ---
-title: 重生之我用valaxy搭建个人博客
+title: 重生之搭建个人博客
 date: 2025-08-12
 updated: 2025-08-13
 categories: 生活
+tag:
+  - 第一次
 top: 1
 ---
 

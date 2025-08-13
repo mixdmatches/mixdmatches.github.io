@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 第二次面试-扬州博学
+hide: index
 date: 2025-04-09
 categories: 面经
 tags:

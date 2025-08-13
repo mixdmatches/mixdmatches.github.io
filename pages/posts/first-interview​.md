@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 第一次面试-泛在能源
+hide: index
 date: 2025-03-05
 categories: 面经
 tags:
