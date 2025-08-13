@@ -2,13 +2,13 @@ import { defineSiteConfig } from 'valaxy'
 
 export default defineSiteConfig({
   timezone: "Asia/Shanghai",
-  url: "https://",
+  url: "https://mixdmatches.github.io/fan-home/",
   lang: "zh-CN",
   title: "下饭小窝",
   author: {
     name: "陈下饭",
     email: "1919600547@qq.com",
-    avatar: "https://youke1.picui.cn/s1/2025/08/11/6899e7e0d91b0.png",
+    avatar: "/avatar.png",
     intro: "",
     status: {
       emoji: "🍚",

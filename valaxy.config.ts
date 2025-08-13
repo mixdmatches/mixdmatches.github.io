@@ -31,13 +31,13 @@ export default defineValaxyConfig<UserThemeConfig>({
     pages: [
       {
         name: "我的书单",
-        url: "/links/",
+        url: "/books/",
         icon: "i-ri-genderless-line",
         color: "dodgerblue",
       },
       {
-        name: "喜欢的女孩子",
-        url: "/girls/",
+        name: "喜欢的音乐",
+        url: "/musics/",
         icon: "i-ri-women-line",
         color: "hotpink",
       },

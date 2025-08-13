@@ -24,8 +24,8 @@ declare module 'vue-router/auto-routes' {
     '/about/': RouteRecordInfo<'/about/', '/about', Record<never, never>, Record<never, never>>,
     '/about/site': RouteRecordInfo<'/about/site', '/about/site', Record<never, never>, Record<never, never>>,
     '/archives/': RouteRecordInfo<'/archives/', '/archives', Record<never, never>, Record<never, never>>,
+    '/books/': RouteRecordInfo<'/books/', '/books', Record<never, never>, Record<never, never>>,
     '/categories/': RouteRecordInfo<'/categories/', '/categories', Record<never, never>, Record<never, never>>,
-    '/links/': RouteRecordInfo<'/links/', '/links', Record<never, never>, Record<never, never>>,
     '/page/[page]': RouteRecordInfo<'/page/[page]', '/page/:page', { page: ParamValue<true> }, { page: ParamValue<false> }>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
     '/posts/fifth-interview': RouteRecordInfo<'/posts/fifth-interview', '/posts/fifth-interview', Record<never, never>, Record<never, never>>,
@@ -72,12 +72,12 @@ declare module 'vue-router/auto-routes' {
       routes: '/archives/'
       views: never
     }
-    'pages/categories/index.md': {
-      routes: '/categories/'
+    'pages/books/index.md': {
+      routes: '/books/'
       views: never
     }
-    'pages/links/index.md': {
-      routes: '/links/'
+    'pages/categories/index.md': {
+      routes: '/categories/'
       views: never
     }
     'node_modules/.pnpm/valaxy-theme-yun@0.26.2_vue@3.5.18_typescript@5.9.2_/node_modules/valaxy-theme-yun/pages/page/[page].vue': {
