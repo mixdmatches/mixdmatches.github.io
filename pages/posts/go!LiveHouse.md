@@ -1,9 +1,11 @@
 ---
 title: mixed matches的live house
 date: 2025-08-14
-categories: 日常生活
+categories: 日常罢了
+cover: /images/mixed-matches.jpg
 tag:
   - mixed matches
+  - 第一次
 ---
 
 哼哼，刚发工资就去买mm上海演出的票了( •̀ ω •́ )y

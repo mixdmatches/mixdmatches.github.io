@@ -5,6 +5,7 @@ date: 2025-08-12
 categories: 面经
 tags:
   - 面经
+cover: /images/美团面试.jpg
 ---
 
 ## 第五次面试-2025年8月12日-美团一面 1h

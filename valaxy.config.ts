@@ -41,6 +41,12 @@ export default defineValaxyConfig<UserThemeConfig>({
         icon: "i-ri-heart-line",
         color: "dodgerblue",
       },
+      {
+        name:'喜欢的音乐',
+        url:'/musics/',
+        icon:'i-ri-music-2-line',
+        color:'#C20C0C'
+      }
     ],
 
     footer: {
@@ -49,4 +55,9 @@ export default defineValaxyConfig<UserThemeConfig>({
   },
 
   unocss: { safelist },
+
+  vue: {
+    isCustomElement: [(tag: string) => ["meting-js"].includes(tag)],
+  },
+
 });

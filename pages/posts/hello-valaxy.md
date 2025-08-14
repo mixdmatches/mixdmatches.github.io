@@ -2,10 +2,11 @@
 title: 重生之搭建个人博客
 date: 2025-08-12
 updated: 2025-08-13
-categories: 生活
+categories: 日常罢了
 tag:
   - 第一次
 top: 1
+cover: /images/avatar.png
 ---
 
 ## 为何要搭建一个博客

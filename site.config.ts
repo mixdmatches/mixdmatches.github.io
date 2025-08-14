@@ -78,4 +78,5 @@ export default defineSiteConfig({
   mediumZoom: {
     enable: true,
   },
+
 });
