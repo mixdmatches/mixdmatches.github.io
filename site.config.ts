@@ -8,7 +8,7 @@ export default defineSiteConfig({
   author: {
     name: "陈下饭",
     email: "1919600547@qq.com",
-    avatar: "/avatar.png",
+    avatar: "/images/avatar.png",
     intro: "",
     status: {
       emoji: "🍚",
