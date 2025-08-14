@@ -2,6 +2,6 @@
 title: 关于站点
 ---
 
-Valaxy + valaxy-theme-yun Demo Site
+本博客于2025-08-12建立
 
-- Default Theme: [valaxy-theme-yun](https://github.com/YunYouJun/valaxy/blob/main/packages/valaxy-theme-yun/)
+本人表达欲望强烈，这里记录我的碎碎念，小分享和学习记录
