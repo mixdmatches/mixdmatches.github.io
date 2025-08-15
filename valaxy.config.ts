@@ -20,7 +20,7 @@ export default defineValaxyConfig<UserThemeConfig>({
       api: "https://el-bot-api.vercel.app/api/words/young",
       hitokoto: {
         enable: true,
-        api: "https://v1.hitokoto.cn/?c=b&c=d&c=i",
+        api: "https://v1.hitokoto.cn/?c=b&c=d",
       },
     },
     banner: {

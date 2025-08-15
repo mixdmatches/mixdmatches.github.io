@@ -25,7 +25,6 @@ declare module 'vue-router/auto-routes' {
     '/about/site': RouteRecordInfo<'/about/site', '/about/site', Record<never, never>, Record<never, never>>,
     '/anime-character/': RouteRecordInfo<'/anime-character/', '/anime-character', Record<never, never>, Record<never, never>>,
     '/archives/': RouteRecordInfo<'/archives/', '/archives', Record<never, never>, Record<never, never>>,
-    '/books/': RouteRecordInfo<'/books/', '/books', Record<never, never>, Record<never, never>>,
     '/categories/': RouteRecordInfo<'/categories/', '/categories', Record<never, never>, Record<never, never>>,
     '/musics/': RouteRecordInfo<'/musics/', '/musics', Record<never, never>, Record<never, never>>,
     '/page/[page]': RouteRecordInfo<'/page/[page]', '/page/:page', { page: ParamValue<true> }, { page: ParamValue<false> }>,
@@ -78,10 +77,6 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/archives/index.md': {
       routes: '/archives/'
-      views: never
-    }
-    'pages/books/index.md': {
-      routes: '/books/'
       views: never
     }
     'pages/categories/index.md': {

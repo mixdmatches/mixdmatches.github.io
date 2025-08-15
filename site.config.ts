@@ -37,6 +37,12 @@ export default defineSiteConfig({
       icon: "i-ri-bilibili-line",
       color: "#FF8EB3",
     },
+    {
+      name: "稀土掘金",
+      link: "https://juejin.cn/user/394103642400905",
+      icon: "i-tabler-brand-juejin",
+      color: "#00A3EE",
+    },
   ],
 
   search: {
@@ -79,4 +85,11 @@ export default defineSiteConfig({
     enable: true,
   },
 
+  encrypt: {
+    // 开启加密，默认关闭
+    enable: true,
+    // algorithm
+    // iv
+    // salt
+  },
 });
