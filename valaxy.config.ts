@@ -1,4 +1,5 @@
 import type { UserThemeConfig } from 'valaxy-theme-yun'
+import { addonWaline } from "valaxy-addon-waline";
 import { defineValaxyConfig } from 'valaxy'
 
 // add icons what you will need
@@ -42,11 +43,11 @@ export default defineValaxyConfig<UserThemeConfig>({
         color: "dodgerblue",
       },
       {
-        name:'喜欢的音乐',
-        url:'/musics/',
-        icon:'i-ri-music-2-line',
-        color:'#C20C0C'
-      }
+        name: "喜欢的音乐",
+        url: "/musics/",
+        icon: "i-ri-music-2-line",
+        color: "#C20C0C",
+      },
     ],
 
     footer: {
@@ -59,5 +60,14 @@ export default defineValaxyConfig<UserThemeConfig>({
   vue: {
     isCustomElement: [(tag: string) => ["meting-js"].includes(tag)],
   },
-
+  siteConfig: {
+    comment: {
+      enable: true,
+    },
+  },
+  addons: [
+    addonWaline({
+      serverURL: "https://www.chenxiafan.cn/",
+    }),
+  ],
 });

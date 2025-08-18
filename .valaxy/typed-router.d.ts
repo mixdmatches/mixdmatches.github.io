@@ -29,12 +29,15 @@ declare module 'vue-router/auto-routes' {
     '/musics/': RouteRecordInfo<'/musics/', '/musics', Record<never, never>, Record<never, never>>,
     '/page/[page]': RouteRecordInfo<'/page/[page]', '/page/:page', { page: ParamValue<true> }, { page: ParamValue<false> }>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
+    '/posts/event-loop': RouteRecordInfo<'/posts/event-loop', '/posts/event-loop', Record<never, never>, Record<never, never>>,
     '/posts/fifth-interview': RouteRecordInfo<'/posts/fifth-interview', '/posts/fifth-interview', Record<never, never>, Record<never, never>>,
     '/posts/first-interview​': RouteRecordInfo<'/posts/first-interview​', '/posts/first-interview​', Record<never, never>, Record<never, never>>,
     '/posts/fourth-interview': RouteRecordInfo<'/posts/fourth-interview', '/posts/fourth-interview', Record<never, never>, Record<never, never>>,
     '/posts/go!LiveHouse': RouteRecordInfo<'/posts/go!LiveHouse', '/posts/go!LiveHouse', Record<never, never>, Record<never, never>>,
     '/posts/hello-valaxy': RouteRecordInfo<'/posts/hello-valaxy', '/posts/hello-valaxy', Record<never, never>, Record<never, never>>,
+    '/posts/iframe': RouteRecordInfo<'/posts/iframe', '/posts/iframe', Record<never, never>, Record<never, never>>,
     '/posts/second-interview': RouteRecordInfo<'/posts/second-interview', '/posts/second-interview', Record<never, never>, Record<never, never>>,
+    '/posts/swiper': RouteRecordInfo<'/posts/swiper', '/posts/swiper', Record<never, never>, Record<never, never>>,
     '/posts/third-interview': RouteRecordInfo<'/posts/third-interview', '/posts/third-interview', Record<never, never>, Record<never, never>>,
     '/projects/': RouteRecordInfo<'/projects/', '/projects', Record<never, never>, Record<never, never>>,
     '/tags/': RouteRecordInfo<'/tags/', '/tags', Record<never, never>, Record<never, never>>,
@@ -95,6 +98,10 @@ declare module 'vue-router/auto-routes' {
       routes: '/posts/'
       views: never
     }
+    'pages/posts/event-loop.md': {
+      routes: '/posts/event-loop'
+      views: never
+    }
     'pages/posts/fifth-interview.md': {
       routes: '/posts/fifth-interview'
       views: never
@@ -115,8 +122,16 @@ declare module 'vue-router/auto-routes' {
       routes: '/posts/hello-valaxy'
       views: never
     }
+    'pages/posts/iframe.md': {
+      routes: '/posts/iframe'
+      views: never
+    }
     'pages/posts/second-interview.md': {
       routes: '/posts/second-interview'
+      views: never
+    }
+    'pages/posts/swiper.md': {
+      routes: '/posts/swiper'
       views: never
     }
     'pages/posts/third-interview.md': {
