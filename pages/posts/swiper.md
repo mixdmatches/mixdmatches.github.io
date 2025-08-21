@@ -1,5 +1,5 @@
 ---
-title: 用swiperjs实现轮播图效果
+title: 用swiperjs v11.x实现轮播图效果
 date: 2025-08-18
 updated: 2025-08-20
 categories:
@@ -7,7 +7,7 @@ categories:
   - 实习
 tag:
   - 组件
-  - js
+  - 踩坑记录
 ---
 
 
@@ -44,7 +44,7 @@ tag:
 
 web Component组件: [swiperjs官方文档](https://swiper.js.cn/element)
 
-swiper vue组件已经不推荐了，原因：
+swiper vue组件我不太推荐，原因：
 
 ![alt text](/images/swiper-vue.png)
 
@@ -242,7 +242,7 @@ const playInfos = ref([
 
 ### 5. 自定义分页器
 
-我们获取幻灯片索引的时候要用 `realIndex`，千万不要用 `activeIndex`，因为 `activeIndex` 是当前显示的索引，而 `realIndex` 是实际的索引,我当时就是搞了好久被这个区别坑害惨了
+我们获取幻灯片索引的时候要用 `realIndex`，千万不要用 `activeIndex`，我当时就是搞了好久被这个区别坑害惨了
 
 看官网对这两个属性的描述
 
@@ -433,3 +433,305 @@ const images = ref(...数据信息)
 效果：
 
 ![alt text](/images/swiper-arrow-final.png)
+
+### 8. 展示多个轮播项
+
+展示多个轮播项的话只要给 `swiper-container` 设置 `slides=per-view` 属性即可
+
+但有一点要注意的是，**盒子的总宽度要给一个合适的值**，`宽度 = （轮播项宽度 + space-between值）* slides-per-view - space-between值` 这样计算出来的值就很合适了
+
+比如这个轮播组件，要展示7个轮播项，我只给宽度设置 `900px` 这些轮播项会挤压在一起，哪怕设置了 `space-between` 也没有间隔效果
+
+![alt text](/images/swiper-space.png)
+
+这个图片宽度是 `139px` 要给的轮播项间距 `space-between` 是 `10`，展示 7 个 ，那么合适的总宽度为 `(139 + 10) * 7 - 10 = 1033`
+
+看效果
+
+![alt text](/images/swiper-margin.png)
+
+代码实现：
+
+```vue
+<template>
+  <div class="swiper-box">
+    <swiper-container
+      space-between="10"
+      slides-per-view="7"
+      loop="true"
+      :navigation="{
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }"
+    >
+      <swiper-slide v-for="item in 12" :key="item">
+        <img src="./index_40.png" />
+      </swiper-slide>
+    </swiper-container>
+    <div class="next swiper-button-next arrow"></div>
+    <div class="prev swiper-button-prev arrow"></div>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.swiper-box {
+  position: relative;
+  width: 1033px;
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .next,
+  .prev {
+    width: 10px;
+    height: 47px;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .prev {
+    background-image: url(./index_scrollpic_left.jpg);
+    left: 10px;
+    right: auto;
+  }
+
+  .next {
+    background-image: url(./index_scrollpic_right.jpg);
+    right: 10px;
+    left: auto;
+  }
+}
+</style>
+
+```
+
+
+## 4. 踩坑总结
+
+初次使用swiperjs比较生疏，好多参数都弄不懂，打开官方文档一看，密密麻麻的属性方法。甚至一开始我看的还不是v11.x的文档，折腾我半天
+
+在做导航箭头的时候，我一开始是把他们 swiper-container 里面和 swiper-slide 同级，结果不行，因为每次切换下/上一项的时候，箭头导航会随着轮播滚动，而不是固定在原地，而且还要给自定义的导航箭头盒子设置 `.swiper-button-prev/next` 让swiper识别
+
+在做自定义分页器的时候，要获取当前幻灯片的索引实现当前分页器高亮，我看别人的文章使用的 `activeIndex` ，我也这样做，踩坑了，仔细翻了文档才明白，由于我设置了 `loop` 为 `true` 开启了循环模式，所以最好是用 `realIndex`
+
+
+## 5. 组件封装
+
+我觉得还可以给swiper组件二次封装，因为我这个使用场景全都是要用自定义的导航箭头和分页器，每次还要给swiper外面再包一层 `div`，导航箭头的摆放位置也差不多，不用给每个都设置位置摆放样式，而且swiper容器的宽度最好也是根据子容器个数和子容器间隔宽度来动态计算，不然每次给固定宽度很麻烦，嗯我下次有空的时候封装一下后面这篇文章继续更新。
+
+其实我在用swiper的web component组件之前就是用 new Swiper的方法来封装的，因为我那时刚看官方文档没发现这个有vue的用法... 我先贴代码
+
+```vue
+<script setup lang="ts">
+import { onMounted, onUnmounted, PropType, ref } from 'vue'
+import Swiper from 'swiper'
+import 'swiper/css'
+import 'swiper/css/effect-fade'
+const swiperRef = ref<Swiper | null>(null)
+const containerRef = ref<HTMLElement | null>(null)
+
+const props = defineProps({
+  // 整个轮播的宽度
+  width: {
+    type: String,
+    default: '100%'
+  },
+  // 展示左右箭头方式
+  showArrows: {
+    type: String as PropType<'always' | 'hover' | 'never'>,
+    default: 'always'
+  },
+  // 同时可见的轮播数量
+  showCount: {
+    type: Number,
+    default: 1
+  },
+  // 相邻轮播之间的间距，单位px
+  spaceBetween: {
+    type: Number,
+    default: 0
+  },
+  // 左箭头和右箭头距离最左/右的间隔
+  arrowGap: {
+    type: Number,
+    default: 0
+  },
+  // 循环播放
+  loop: {
+    type: Boolean,
+    default: true
+  },
+  // 动效
+  effect: {
+    type: String as PropType<
+      'slide' | 'fade' | 'cube' | 'coverflow' | 'flip' | 'creative' | 'cards'
+    >,
+    default: 'slide'
+  },
+  // 是否开启自动播放
+  autoPlay: {
+    type: Boolean,
+    default: false
+  },
+  // 自动播放间隔时间，单位ms
+  autoPlayDelay: {
+    type: Number,
+    default: 4000
+  },
+  // 是否显示指示器
+  showPagination: {
+    type: Boolean,
+    default: false
+  },
+  // 是否竖向轮播
+  vertical: {
+    type: Boolean,
+    default: false
+  }
+})
+
+const emit = defineEmits(['change'])
+
+onMounted(() => {
+  if (containerRef.value) {
+    const nextBtn = containerRef.value.querySelector(
+      '.swiper-button-next'
+    ) as HTMLElement
+    const prevBtn = containerRef.value.querySelector(
+      '.swiper-button-prev'
+    ) as HTMLElement
+    swiperRef.value = new Swiper(containerRef.value, {
+      direction: props.vertical ? 'vertical' : 'horizontal',
+      slidesPerView: props.showCount,
+      spaceBetween: props.spaceBetween,
+      navigation: {
+        nextEl: nextBtn,
+        prevEl: prevBtn
+      },
+      ...(props.showPagination && {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true, // 允许点击指示器切换
+          bulletClass: 'swiper-pagination-bullet',
+          bulletActiveClass: 'swiper-pagination-bullet-active'
+        }
+      }),
+      loop: props.loop,
+      effect: props.effect,
+      ...(props.autoPlay && {
+        autoplay: {
+          delay: props.autoPlayDelay
+        }
+      })
+    })
+    swiperRef.value.on('slideChange', function (swiper) {
+      emit('change', swiper)
+    })
+  }
+})
+
+onUnmounted(() => {
+  if (swiperRef.value) {
+    swiperRef.value.destroy()
+    swiperRef.value = null
+  }
+})
+
+defineExpose({
+  swiper: swiperRef
+})
+</script>
+
+<template>
+  <div
+    class="swiper-container"
+    ref="containerRef"
+    :style="{ width: props.width }"
+  >
+    <div class="swiper-wrapper">
+      <slot></slot>
+    </div>
+    <template v-if="showArrows === 'always' || showArrows === 'hover'">
+      <div
+        :class="['swiper-button-next', { 'show-type': showArrows === 'hover' }]"
+        :style="{ right: props.arrowGap + 'px' }"
+      >
+        <slot name="next"> &gt; </slot>
+      </div>
+      <div
+        :class="['swiper-button-prev', { 'show-type': showArrows === 'hover' }]"
+        :style="{ left: props.arrowGap + 'px' }"
+      >
+        <slot name="prev"> &lt; </slot>
+      </div>
+    </template>
+    <div class="swiper-pagination"></div>
+  </div>
+</template>
+
+<style scoped lang="scss">
+.swiper-container {
+  position: relative;
+  height: 100%;
+  min-height: 75px;
+  overflow: hidden;
+  .show-type {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 10;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 10;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+  .swiper-pagination {
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    cursor: pointer;
+    :deep(.swiper-pagination-bullet) {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(186, 186, 186, 0.5);
+      margin: 0 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    // 激活状态指示器样式
+    :deep(.swiper-pagination-bullet-active) {
+      background: #87b9ff;
+    }
+  }
+}
+</style>
+```
+
+eee后面有空我再基于swiper-container封装一个吧
+
+~~哇为了写这篇文章再写一遍这个代码感觉更熟练使用swiper了~~

@@ -80,7 +80,7 @@ export default defineSiteConfig({
       },
     },
   },
-
+  codeHeightLimit: 300,
   mediumZoom: {
     enable: true,
   },
