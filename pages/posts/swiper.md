@@ -60,6 +60,8 @@ pnpm install swiper
 
 ### 2. 注册使用
 
+#### 1. 全局注册
+
 ``` ts
 // main.ts
 import { createApp } from 'vue'
@@ -75,8 +77,9 @@ register()
 app.mount('#app')
 ```
 
+#### 2. 基本使用示例
+
 ``` vue
-// .vue文件
 <template>
   <swiper-container>
     <swiper-slide>Slide 1</swiper-slide>
@@ -131,6 +134,7 @@ app.mount('#app')
 大致意思就是，vue不能解析这两个组件，因为前面说了，我们引入的是web component,要让vue识别也很简单我们只要这样做
 
 ``` ts
+// vite.config.js
 export default defineConfig({
   plugins: [
     vue({
@@ -153,4 +157,279 @@ export default defineConfig({
 
 - [阮一峰的网络日志-Web Components 入门教程](https://www.ruanyifeng.com/blog/2019/08/web_components.html)
 
-更新中...
+
+
+
+
+### 4. 实现循环自动轮播效果
+
+首先要给swiper-container设定一个固定宽度或者给包裹它的div元素给一个固定宽度，高度由子元素高度撑开就可以了。这里我给swiper-container再包一层div，因为后面要放一个自定义的分页器，分页器最好不要放在swiper-container里面
+
+给轮播项写点样式，最重要的是包裹他们的容器样式一定要加上 `overflow: hidden`
+
+要实现自动轮播效果加上 `autoplay-delay` 设置一个数字，单位毫秒
+
+循环播放加上 `loop` 属性
+
+```vue
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const playInfos = ref([
+  ...轮播数据源
+])
+
+</script>
+
+<template>
+  <div class="swiper-box">
+    <swiper-container loop="true" autoplay-delay="2000">
+      <swiper-slide v-for="item in playInfos" :key="item.href" class="box-item">
+        <a class="img-a" :href="item.href" target="_blank">
+          <img :src="item.img" :alt="item.title" />
+        </a>
+        <a class="title" :href="item.href" target="_blank">
+          {{ item.title }}
+        </a>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</template>
+
+<style scoped lang="scss">
+.swiper-box {
+  position: relative;
+  width: 293px;
+  height: 265px;
+  border: 3px #dad8d8 solid;
+  overflow: hidden; // 这个很重要，一定要加上
+  a {
+    color: #333;
+    display: block;
+  }
+
+  .box-item {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    .img-a {
+      height: 240px;
+      img {
+        width: 293px;
+        height: 240px;
+        overflow: hidden;
+      }
+    }
+    .title {
+      line-height: 25px;
+      font-size: 14px;
+      text-align: center;
+      color: #000;
+      font-weight: bold;
+      background-color: #e8e8e8;
+      // 文字溢出一行省略号
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+</style>
+
+```
+
+这样一个基本的轮播效果就实现了
+
+### 5. 自定义分页器
+
+我们获取幻灯片索引的时候要用 `realIndex`，千万不要用 `activeIndex`，因为 `activeIndex` 是当前显示的索引，而 `realIndex` 是实际的索引,我当时就是搞了好久被这个区别坑害惨了
+
+看官网对这两个属性的描述
+
+![alt text](/images/swiper-active.png)
+
+![alt text](/images/swiper-real.png)
+
+`slideTo` 方法描述
+
+![alt text](/images/swiper-slide-to.png)
+
+```vue
+<script setup lang="ts">
+// ...其它代码
+
+const swiperRef = ref()
+const currentIndex = ref(0)
+
+const onSlideChange = e => {
+  currentIndex.value = e.detail[0].realIndex
+}
+
+const goToSlide = (index: number) => {
+  if (swiperRef.value && swiperRef.value.swiper) {
+    swiperRef.value.swiper.slideTo(index)
+  }
+}
+
+// ...其他代码
+</script>
+
+<template>
+  <div class="swiper-box">
+    <swiper-container
+      ref="swiperRef"
+      loop="true"
+      autoplay-delay="2000"
+      @swiperslidechange="onSlideChange"
+    >
+      <swiper-slide v-for="item in playInfos" :key="item.href" class="box-item">
+        <a class="img-a" :href="item.href" target="_blank">
+          <img :src="item.img" :alt="item.title" />
+        </a>
+        <a class="title" :href="item.href" target="_blank">
+          {{ item.title }}
+        </a>
+      </swiper-slide>
+    </swiper-container>
+    <!-- 自定义分页器 -->
+    <div class="pagination">
+      <span
+        class="dot"
+        :class="{ active: currentIndex === index }"
+        @click="goToSlide(index)"
+        v-for="(item, index) in playInfos"
+        :key="index"
+      >
+        {{ index + 1 }}
+      </span>
+    </div>
+  </div>
+</template>
+
+<style scoped lang="scss">
+// 分页器样式
+.pagination {
+  position: absolute;
+  z-index: 10;
+  right: 5px;
+  bottom: 28px;
+  line-height: 25px;
+  .dot {
+    border: 1px solid #999999;
+    background: #121210;
+    padding: 1px 5px;
+    margin: 0 2px;
+    font-style: normal;
+    cursor: pointer;
+    color: #ffffff;
+  }
+  .active {
+    background: #cc0000;
+    color: #ffffff;
+  }
+}
+</style>
+
+```
+
+最终效果：
+![alt text](/images/swiper-final.png)
+
+
+### 6. 过度动效
+
+swiper提供了很多过渡效果，比如slide、fade、cube、coverflow、flip等
+
+![alt text](/images/swiper-effect.png)
+
+打开南京12320官网发现这个轮播组件的过度动效是渐变的，给 `swiper-container` 加上 `effect="fade"` 就可以了
+
+### 7. 自定义箭头
+
+像下面这个轮播组件是有自定义箭头的
+
+![alt text](/images/swiper-custom-arrow.png)
+
+实现自定义箭头就很简单了
+
+重点是给 `swiper-container` 加上 `navigation` 属性给定 `nextEl` 和 `prevEl` 的值分别为 `.swiper-button-next` 和 `.swiper-button-prev`
+
+你给出的自定义箭头html的类名要加上 `.swiper-button-next` 和 `.swiper-button-prev` ，其他的调整一下样式就好了
+
+代码如下：
+
+```vue
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const images = ref(...数据信息)
+</script>
+
+<template>
+  <div class="swiper-box">
+    <swiper-container
+      loop="true"
+      autoplay-delay="2000"
+      pagination="true"
+      :navigation="{
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }"
+    >
+      <swiper-slide v-for="value in images" :key="value" class="box-item">
+        <img class="swiper-slide" :src="value" />
+      </swiper-slide>
+    </swiper-container>
+    <div class="swiper-button-prev prev arrow"></div>
+    <div class="swiper-button-next next arrow"></div>
+  </div>
+</template>
+
+<style scoped lang="scss">
+.swiper-box {
+  position: relative;
+  width: 262px;
+  height: 242px;
+  border: 3px #dad8d8 solid;
+  overflow: hidden;
+  .arrow {
+    width: 30px;
+    height: 31px;
+    margin: -20px 0 0;
+    display: block;
+    background: url(@/assets/images/ad_ctr.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .prev {
+    left: 10px;
+  }
+  .next {
+    right: 10px;
+    background-position: 0 -33px;
+  }
+  .box_left_bottom {
+    box-sizing: border-box;
+    margin-top: 10px;
+    text-align: center;
+    width: 262px;
+    height: 242px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px #e0e0e0 solid;
+    img {
+      width: 262px;
+      height: 242px;
+      object-fit: cover;
+    }
+  }
+}
+</style>
+
+```
+
+效果：
+
+![alt text](/images/swiper-arrow-final.png)
