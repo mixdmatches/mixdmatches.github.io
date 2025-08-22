@@ -35,7 +35,6 @@ declare module 'vue-router/auto-routes' {
     '/posts/fourth-interview': RouteRecordInfo<'/posts/fourth-interview', '/posts/fourth-interview', Record<never, never>, Record<never, never>>,
     '/posts/go!LiveHouse': RouteRecordInfo<'/posts/go!LiveHouse', '/posts/go!LiveHouse', Record<never, never>, Record<never, never>>,
     '/posts/hello-valaxy': RouteRecordInfo<'/posts/hello-valaxy', '/posts/hello-valaxy', Record<never, never>, Record<never, never>>,
-    '/posts/iframe': RouteRecordInfo<'/posts/iframe', '/posts/iframe', Record<never, never>, Record<never, never>>,
     '/posts/second-interview': RouteRecordInfo<'/posts/second-interview', '/posts/second-interview', Record<never, never>, Record<never, never>>,
     '/posts/swiper': RouteRecordInfo<'/posts/swiper', '/posts/swiper', Record<never, never>, Record<never, never>>,
     '/posts/third-interview': RouteRecordInfo<'/posts/third-interview', '/posts/third-interview', Record<never, never>, Record<never, never>>,
@@ -120,10 +119,6 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/posts/hello-valaxy.md': {
       routes: '/posts/hello-valaxy'
-      views: never
-    }
-    'pages/posts/iframe.md': {
-      routes: '/posts/iframe'
       views: never
     }
     'pages/posts/second-interview.md': {

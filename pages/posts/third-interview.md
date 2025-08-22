@@ -26,7 +26,7 @@ tags:
 15. vue2中created和mounted钩子函数有什么区别？操作dom在created还是mounted中执行？
 16. vModel是谁的语法糖
 17. nextTick是什么，干什么用的
-18. html有哪些缓存技术，sessionStorege和localstoreg有什么区别？token你一般存在哪里
+18. html有哪些缓存技术，sessionStorage和localStorage有什么区别？token你一般存在哪里
 19. 什么是盒模型
 20. 标准盒模型和IE模型有什么区别，怎么设置这两种模型
 21. 怎么实现盒子居中
@@ -34,3 +34,5 @@ tags:
 > 我嘞个八股盛世啊
 
 已入职
+
+总结：完全没想到面试官没有问项目，我还特意复盘了一下项目，不过好在那些八股里面说到的技术我多少了解一些而且用过，所以大部分都讲出来了，最重要的是，双方都没有开摄像头，我也不太紧张
