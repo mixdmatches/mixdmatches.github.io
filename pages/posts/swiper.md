@@ -52,7 +52,7 @@ swiper vue组件我不太推荐，原因：
 
 ### 1. 安装swiperjs
 
-```bash
+``` bash
 npm install swiper
 
 pnpm install swiper
@@ -105,7 +105,7 @@ app.mount('#app')
 
 更多属性方法看 [swiperjs官方文档API](https://swiper.js.cn/swiper-api)
 
-```vue
+``` vue
 <template>
   <swiper-container
     slides-per-view="1"
@@ -171,7 +171,7 @@ export default defineConfig({
 
 循环播放加上 `loop` 属性
 
-```vue
+``` vue
 <script setup lang="ts">
 import { ref } from 'vue'
 
@@ -254,7 +254,7 @@ const playInfos = ref([
 
 ![alt text](/images/swiper-slide-to.png)
 
-```vue
+``` vue
 <script setup lang="ts">
 // ...其它代码
 
@@ -358,7 +358,7 @@ swiper提供了很多过渡效果，比如slide、fade、cube、coverflow、flip
 
 代码如下：
 
-```vue
+``` vue
 <script setup lang="ts">
 import { ref } from 'vue'
 
@@ -452,7 +452,7 @@ const images = ref(...数据信息)
 
 代码实现：
 
-```vue
+``` vue
 <template>
   <div class="swiper-box">
     <swiper-container
@@ -522,7 +522,7 @@ const images = ref(...数据信息)
 
 其实我在用swiper的web component组件之前就是用 new Swiper的方法来封装的，因为我那时刚看官方文档没发现这个有vue的用法... 我先贴代码
 
-```vue
+``` vue
 <script setup lang="ts">
 import { onMounted, onUnmounted, PropType, ref } from 'vue'
 import Swiper from 'swiper'

@@ -2,9 +2,8 @@
 title: 重生之我要搭建个人博客
 date: 2025-08-12
 updated: 2025-08-19
-categories: 日常罢了
-tag:
-  - 第一次
+categories:
+  - 日常罢了
 top: 1
 cover: /images/avatar.png
 ---
