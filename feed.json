@@ -1,0 +1,62 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "下饭小窝",
+    "home_page_url": "https://mixdmatches.github.io/",
+    "feed_url": "https://mixdmatches.github.io/feed.json",
+    "description": "无限进步",
+    "icon": "https://mixdmatches.github.io/images/avatar.png",
+    "author": {
+        "name": "陈下饭",
+        "url": "https://valaxy.site"
+    },
+    "items": [
+        {
+            "id": "https://mixdmatches.github.io/posts/total-interview",
+            "content_html": "<h2>第五次面试-2025年8月12日-美团一面 1h</h2>\n<p>距离上一次面试是两个月前了，生疏了啊都，表现得很差，我很不满意自己</p>\n<ol>\n<li>自我介绍</li>\n<li>现在是在这家公司正在实习吗，为什么要重新找呢？</li>\n</ol>\n<br/><p>访问 <a href=\"https://mixdmatches.github.io/posts/total-interview\" target=\"_blank\">https://mixdmatches.github.io/posts/total-interview</a> 阅读全文。</p>",
+            "url": "https://mixdmatches.github.io/posts/total-interview",
+            "title": "面经大总结",
+            "date_modified": "2025-08-25T00:00:00.000Z",
+            "date_published": "2025-08-25T16:39:20.519Z",
+            "author": {
+                "name": "陈下饭",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "https://mixdmatches.github.io/posts/event-loop",
+            "content_html": "<h3>前言</h3>\n<p>关于这个事件循环，最初在慧策笔试的时候碰到过，美团一面的时候也被拷打过，面试官建议我再多去了解一下，所以写这篇文章加深一下对事件循环的理解</p>\n<h3>事件循环概念</h3>\n<p>事件循环（Eve</p>\n<br/><p>访问 <a href=\"https://mixdmatches.github.io/posts/event-loop\" target=\"_blank\">https://mixdmatches.github.io/posts/event-loop</a> 阅读全文。</p>",
+            "url": "https://mixdmatches.github.io/posts/event-loop",
+            "title": "关于事件循环",
+            "date_modified": "2025-08-15T00:00:00.000Z",
+            "date_published": "2025-08-25T00:00:00.000Z",
+            "author": {
+                "name": "陈下饭",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "https://mixdmatches.github.io/posts/swiper",
+            "content_html": "<h2>1. 前言</h2>\n<p>最近公司给了我一个任务是用vue重构一个很老的jsp项目，页面样式是定制的，不能用组件库，里面的轮播图那就得自己实现了。这里我用swiper实现</p>\n<h2>2. 效果</h2>\n<ol>\n<li>纯</li>\n</ol>\n<br/><p>访问 <a href=\"https://mixdmatches.github.io/posts/swiper\" target=\"_blank\">https://mixdmatches.github.io/posts/swiper</a> 阅读全文。</p>",
+            "url": "https://mixdmatches.github.io/posts/swiper",
+            "title": "用swiperjs v11.x实现轮播图效果",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "date_published": "2025-08-20T00:00:00.000Z",
+            "author": {
+                "name": "陈下饭",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "https://mixdmatches.github.io/posts/hello-valaxy",
+            "content_html": "<p>为何要搭建一个博客？</p>\n<ol>\n<li>去年年底有的一个想法，但一直没实现</li>\n<li>最近前几个月在找实习，发现自己表达能力很弱，不能很准确的向别人描述自己的经历，</li>\n<li>想把自己的一些学习经历、项目经历、思考分</li>\n</ol>\n<br/><p>访问 <a href=\"https://mixdmatches.github.io/posts/hello-valaxy\" target=\"_blank\">https://mixdmatches.github.io/posts/hello-valaxy</a> 阅读全文。</p>",
+            "url": "https://mixdmatches.github.io/posts/hello-valaxy",
+            "title": "重生之我要搭建个人博客",
+            "date_modified": "2025-08-12T00:00:00.000Z",
+            "date_published": "2025-08-19T00:00:00.000Z",
+            "author": {
+                "name": "陈下饭",
+                "url": "https://valaxy.site"
+            }
+        }
+    ]
+}

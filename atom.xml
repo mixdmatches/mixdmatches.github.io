@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mixdmatches.github.io/</id>
+    <title>下饭小窝</title>
+    <updated>2025-08-25T16:40:24.859Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>陈下饭</name>
+        <email>1919600547@qq.com</email>
+        <uri>https://valaxy.site</uri>
+    </author>
+    <link rel="alternate" href="https://mixdmatches.github.io/"/>
+    <link rel="self" href="https://mixdmatches.github.io/atom.xml"/>
+    <subtitle>无限进步</subtitle>
+    <logo>https://mixdmatches.github.io/images/avatar.png</logo>
+    <icon>https://mixdmatches.github.io/favicon.svg</icon>
+    <rights>CC BY-NC-SA 4.0 2025 © 陈下饭</rights>
+    <entry>
+        <title type="html"><![CDATA[面经大总结]]></title>
+        <id>https://mixdmatches.github.io/posts/total-interview</id>
+        <link href="https://mixdmatches.github.io/posts/total-interview"/>
+        <updated>2025-08-25T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>第五次面试-2025年8月12日-美团一面 1h</h2>
+<p>距离上一次面试是两个月前了，生疏了啊都，表现得很差，我很不满意自己</p>
+<ol>
+<li>自我介绍</li>
+<li>现在是在这家公司正在实习吗，为什么要重新找呢？</li>
+</ol>
+<br/><p>访问 <a href="https://mixdmatches.github.io/posts/total-interview" target="_blank">https://mixdmatches.github.io/posts/total-interview</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>陈下饭</name>
+            <email>1919600547@qq.com</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-08-25T16:39:20.519Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于事件循环]]></title>
+        <id>https://mixdmatches.github.io/posts/event-loop</id>
+        <link href="https://mixdmatches.github.io/posts/event-loop"/>
+        <updated>2025-08-15T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h3>前言</h3>
+<p>关于这个事件循环，最初在慧策笔试的时候碰到过，美团一面的时候也被拷打过，面试官建议我再多去了解一下，所以写这篇文章加深一下对事件循环的理解</p>
+<h3>事件循环概念</h3>
+<p>事件循环（Eve</p>
+<br/><p>访问 <a href="https://mixdmatches.github.io/posts/event-loop" target="_blank">https://mixdmatches.github.io/posts/event-loop</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>陈下饭</name>
+            <email>1919600547@qq.com</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-08-25T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[用swiperjs v11.x实现轮播图效果]]></title>
+        <id>https://mixdmatches.github.io/posts/swiper</id>
+        <link href="https://mixdmatches.github.io/posts/swiper"/>
+        <updated>2025-08-18T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>1. 前言</h2>
+<p>最近公司给了我一个任务是用vue重构一个很老的jsp项目，页面样式是定制的，不能用组件库，里面的轮播图那就得自己实现了。这里我用swiper实现</p>
+<h2>2. 效果</h2>
+<ol>
+<li>纯</li>
+</ol>
+<br/><p>访问 <a href="https://mixdmatches.github.io/posts/swiper" target="_blank">https://mixdmatches.github.io/posts/swiper</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>陈下饭</name>
+            <email>1919600547@qq.com</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-08-20T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[重生之我要搭建个人博客]]></title>
+        <id>https://mixdmatches.github.io/posts/hello-valaxy</id>
+        <link href="https://mixdmatches.github.io/posts/hello-valaxy"/>
+        <updated>2025-08-12T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>为何要搭建一个博客？</p>
+<ol>
+<li>去年年底有的一个想法，但一直没实现</li>
+<li>最近前几个月在找实习，发现自己表达能力很弱，不能很准确的向别人描述自己的经历，</li>
+<li>想把自己的一些学习经历、项目经历、思考分</li>
+</ol>
+<br/><p>访问 <a href="https://mixdmatches.github.io/posts/hello-valaxy" target="_blank">https://mixdmatches.github.io/posts/hello-valaxy</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>陈下饭</name>
+            <email>1919600547@qq.com</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-08-19T00:00:00.000Z</published>
+    </entry>
+</feed>
