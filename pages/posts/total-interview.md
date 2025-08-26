@@ -28,28 +28,34 @@ cover: /images/美团面试.jpg
 7. localstorage和sessionStorage，cookie的区别
 ::: details 点击查看
 存储大小：
+
    - localStorage：一般5MB-10MB
    - sessionStorage：一般5MB-10MB
    - cookie：4KB左右
+
 存储位置：
    - localStorage：数据存储在本地客户端，不会随请求发送到服务器，仅在客户端使用。
    - sessionStorage：同样存储在本地客户端，不参与请求发送到服务器，且只在当前会话有效。
    - cookie：存储在客户端，但在每次 HTTP 请求时，会自动将符合条件的 cookie 发送到服务器，增加请求的数据量。
+
 生命周期：
-    - localStorage：永久存储，除非手动删除
-    - sessionStorage：数据仅在当前会话期间有效，当页面关闭或浏览器关闭后，数据会被自动清除。
-    - cookie：可以设置过期时间，若未设置，默认在会话结束时（浏览器关闭）失效。
+  - localStorage：永久存储，除非手动删除。
+  - sessionStorage：数据仅在当前会话期间有效，当页面关闭或浏览器关闭后，数据会被自动清除。
+  - cookie：可以设置过期时间，若未设置，默认在会话结束时（浏览器关闭）失效。
+
 作用域：
-    - localStorage：在同一域名下，所有页面都可以共享存储的数据，即使跨页面也能访问。
-    - sessionStorage：作用域限制在同一窗口（或标签页）的同一域名下，不同窗口或标签页之间的数据不共享
-    - cookie：可以通过设置 path 和 domain 属性来控制其作用域，允许不同页面或子域名之间共享数据。
+  - localStorage：在同一域名下，所有页面都可以共享存储的数据，即使跨页面也能访问。
+  - sessionStorage：作用域限制在同一窗口（或标签页）的同一域名下，不同窗口或标签页之间的数据不共享。
+  - cookie：可以通过设置 path 和 domain 属性来控制其作用域，允许不同页面或子域名之间共享数据。
+
 安全性：
-    - localStorage：由于不参与服务器通信，安全性相对较高，但存储敏感信息时仍需加密。
-    - sessionStorage：同 localStorage，仅在当前会话有效，安全性也较高。
-    - cookie：因为会随请求发送到服务器，容易受到跨站请求伪造（CSRF）和跨站脚本攻击（XSS），存储敏感信息时需使用 HttpOnly、Secure 等属性增强安全性。
+  - localStorage：由于不参与服务器通信，安全性相对较高，但存储敏感信息时仍需加密。
+  - sessionStorage：同 localStorage，仅在当前会话有效，安全性也较高。
+  - cookie：因为会随请求发送到服务器，容易受到跨站请求伪造（CSRF）和跨站脚本攻击（XSS），存储敏感信息时需使用 HttpOnly、Secure 等属性增强安全性。
+
 操作接口：
-    - localStorage 和 sessionStorage：提供了简单的 API，如 setItem、getItem、removeItem 和 clear 来操作数据。
-    - cookie：操作相对复杂，需要手动解析和设置 document.cookie 字符串
+  - localStorage 和 sessionStorage：提供了简单的 API，如 setItem、getItem、removeItem 和 clear 来操作数据。
+  - cookie：操作相对复杂，需要手动解析和设置 document.cookie 字符串。
 :::
 8. cookie是谁来存储的，可以修改它的数据吗
 ::: details 点击查看
@@ -120,7 +126,7 @@ new Array('a')  // 1个元素，值为'a'
 :::
 16. 两个事件循环输出题（我忘了，大概就是setTimeout里嵌套Promise，promise里嵌套setTimeoust,然后还有链式调用这样）
 
-被拷打麻了，然后回去深入了解了一下，在网上看了很多事件笔试题，写了这篇文章 [关于事件循环](./event-loop.md)
+被拷打麻了，然后回去深入了解了一下，在网上看了很多事件笔试题，写了一下文章 [关于事件循环](./event-loop.md)
 
 反问：面试结果多久出，部门业务，能给我一点建议吗有哪些方面需要提升
 
@@ -137,11 +143,81 @@ new Array('a')  // 1个元素，值为'a'
 7. 你这个组件库有投入到别的开发项目中用吗
 8. 你用echart做过哪些图表
 9. vue3的组件从创建到销毁的过程
+::: details 点击查看
+这过程分为四个阶段：初始化，挂载，更新，卸载。vue在初始化阶段会创建组件实例，setup() 函数会在初始化阶段调用，用于初始化组件的状态和事件处理函数。组件创建完成后进入挂载阶段，将组件渲染到 DOM 中，在挂在之前可以调用 onBeforeMount(),挂载之后可以调用 onMounted(),此时可以访问DOM元素。在更新阶段当组件的响应式数据发生变化时，就会触发组件更新，onBeforeUpdate() 在组件更新前调用，此时数据已经更新但是DOM还未重新渲染，所以可以访问更新前的DOM状态，onUpdated() 在组件更新后调用，此时DOM元素已经重新完成渲染，可以访问更新后的DOM状态。 当组件从DOM中移除时会进入卸载阶段，onBeforeUnmounted() 在组件卸载前调用，组件实例仍然存在，可以在这个阶段进行一些清理工作，比如移除事件监听器，onUnmounted() 在组件卸载完成之后调用，组件实例已经被销毁。
+:::
 10. v-if和v-show
+::: details 点击查看
+- v-if：当条件为真时渲染元素，为假时不渲染。
+- v-show：无论条件是否为真，都会渲染元素，只是通过 CSS 控制显示与隐藏。
+:::
 11. 用原生的方法控制一个元素显示隐藏有哪些方法，怎么做
+::: details 点击查看
+- display: none; 元素从文档流中移除，不占用空间，不会触发重绘或回流。
+- visibility: hidden; 元素不可见，但仍占用空间，会触发重绘或回流。
+- opacity: 0; 元素不可见，但仍占用空间，不会触发重绘或回流。
+- transform: scale(0); 元素不可见，但仍占用空间，不会触发重绘或回流。
+:::
 12. 盒模型相关的
+::: details 点击查看
+盒模型是布局的基础概念，它把 HTML 元素看作一个矩形盒子，由内容（content）、内边距（padding）、边框（border）和外边距（margin）这几个部分构成。常见的盒模型有标准盒模型和 IE 盒模型（怪异盒模型）
+- 标准盒模型（W3C 盒模型）：
+  - 总宽度 = `width` + `padding-left` + `padding-right` + `border-left-width` + `border-right-width` + `margin-left` + `margin-right`
+  - 总高度 = `height` + `padding-top` + `padding-bottom` + `border-top-width` + `border-bottom-width` + `margin-top` + `margin-bottom`
+- IE盒模型：
+  - width 和 height 已经包含了内容区域、内边距和边框的尺寸。
+  - 总宽度 = `width` + `margin-left` + `margin-right`
+  - 总高度 = `height` + `margin-top` + `margin-bottom`
+- 通过设置 `box-sizing` 为 `border-box` 变成IE盒模型，`content-box` 是标准盒模型
+
+标准盒模型里 width 和 height 仅代表内容区域，而 IE 盒模型的 width 和 height 包含内容、内边距和边框。
+:::
 13. 数组和对象有哪些方法
+::: details 点击查看
+Object:
+  - Object.keys() // 返回一个数组，数组元素是对象的可枚举属性名
+  - Object.values() // 返回一个数组，数组元素是对象的可枚举属性值
+  - Object.entries() // 返回一个数组，数组元素是键值对数组，每个键值对数组的第一个元素是属性名，第二个元素是属性值
+  - Object.assign() // 用于将所有可枚举属性的值从一个或多个源对象复制到目标对象
+  - Object.create() // 创建一个新对象，使用现有的对象来提供新创建的对象的 __proto__
+  - Object.getPrototypeOf() // 获取对象的原型（内部 [[Prototype]] 属性）
+  - Object.setPrototypeOf() // 设置对象的原型（内部 [[Prototype]] 属性）
+  - Object.hasOwnProperty() // 判断对象是否有某个属性，不包括原型链上的属性
+  - Object.is() // 比较两个值是否严格相等，与 === 类似，但处理了一些特殊情况，比如 +0 和 -0 被认为是不相等的，而 NaN 被认为是相等的。
+Array:
+  - Array.prototype.push() // 向数组末尾添加一个或多个元素，并返回新的长度
+  - Array.prototype.pop() // 删除数组的最后一个元素，并返回该元素
+  - Array.prototype.shift() // 删除数组的第一个元素，并返回该元素
+  - Array.prototype.unshift() // 向数组开头添加一个或多个元素，并返回新的长度
+  - Array.prototype.slice() // 返回一个新数组，包含从 start 到 end （不包括 end）的数组元素
+  - Array.prototype.splice() // 向/从数组中添加/删除项目，然后返回被删除的项目
+  - Array.prototype.concat() // 合并两个或多个数组
+  - Array.prototype.join() // 把数组的所有元素转换为一个字符串
+  - Array.prototype.indexOf() // 返回数组中第一个匹配项的索引
+  - Array.prototype.lastIndexOf() // 返回数组中最后一个匹配项的索引
+  - Array.prototype.includes() // 判断数组是否包含指定元素
+  - Array.prototype.sort() // 对数组元素进行排序
+  - Array.prototype.reverse() // 颠倒数组中元素的顺序
+  - Array.prototype.forEach() // 对数组的每个元素执行一次给定的函数
+  - Array.prototype.map() // 创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果
+  - Array.prototype.filter() // 创建一个新数组, 其包含通过所提供函数实现的测试的所有元素
+  - Array.prototype.reduce() // 对数组中的每个元素执行一个由您提供的 reducer 函数(升序执行)，将其结果汇总为单个返回值
+:::
 14. es6的新特性
+::: details 点击查看
+- 新的变量声明：let const var
+- Proxy/Reflect
+- 箭头函数
+- 类 class关键字
+- 模块化
+- 解构赋值
+- 模板字符串
+- 扩展运算符
+- Promise
+- 新的对象方法：Object.assign() Object.keys() Object.values() Object.entries()
+- 新的数据结构 Set Map
+- 迭代器和生成器
+:::
 
 反问：1.面试结果什么时候出，2.具体业务
 
@@ -152,25 +228,118 @@ new Array('a')  // 1个元素，值为'a'
 
 1. 自我介绍
 2. js有哪些基础类型，引用类型？
+::: details 点击查看
+基础类型：number string boolean null undefined symbol bigint
+引用类型：object array function
+:::
 3. 怎么区分是基础类型还是引用类型
+::: details 点击查看
+typeof instanceof
+:::
 4. typeof可以判断哪些类型，可以判断数组吗
+::: details 点击查看
+typeof可以判断哪些类型：number string boolean null undefined symbol bigint object function
+可以判断数组吗：不能，数组的类型是object，typeof数组返回的是object
+:::
 5. 数组有哪些方法
+第四次面试问过了
 6. 了解继承吗，说一下
+::: details 点击查看
+继承就是让子类的实例能够访问到父类上的属性和方法
+:::
 7. 继承是怎么实现的
+::: details 点击查看
+看这篇文章
+[js中七种继承方式](https://juejin.cn/post/7393606971928051727?searchId=202508261352195EC4AE731670C68DC2B1)
+:::
 8. 什么是原型链
+::: details 点击查看
+b站上有个博主讲原型链讲的很明白
+
+[原型链](https://www.bilibili.com/video/BV1ci4y157Ci/?spm_id_from=333.337.search-card.all.click&vd_source=520e795afaa9c69e8a49c513b06bf16e)
+:::
 9. 如何实现深拷贝
+::: details 点击查看
+这个我还真没了解...
+
+概念：深拷贝是创建一个新对象，新对象的属性值与原对象相同，但两者在内存中相互独立，修改新对象不会影响原对象。
+实现：
+1. JSON.parse(JSON.stringify(obj))
+缺点：
+   - 无法处理函数、RegExp、Date 等特殊对象。
+   - 会忽略 undefined 属性。
+   - 不能处理循环引用。
+2. 递归实现深拷贝
+3. 使用lodash
+:::
 10. 了解过防抖和节流吗，你在项目中有用过吗，怎么做的
+::: details 点击查看
+这两个概念我真的很容易混淆
+
+1. 防抖：指在事件被触发 n 秒后再执行回调，如果在这 n 秒内事件又被触发，则重新计时。简单来说，就是将多次高频触发转化为最后一次触发。
+  - 应用场景：
+    - 搜索框输入：用户在输入过程中，不需要每次输入都请求服务器，可在用户停止输入一段时间后再发起请求。
+    - 窗口大小调整：当调整浏览器窗口大小时，频繁触发 resize 事件，使用防抖可减少不必要的计算。
+2. 节流：指在一定时间间隔内，函数只执行一次。不管在这个时间间隔内触发了多少次事件，只有一次有效。
+  - 应用场景：
+    - 滚动事件：在监听页面滚动事件时，比如实现无限滚动加载数据，使用节流可避免频繁触发加载逻辑。
+    - 鼠标点击：防止用户在短时间内多次点击按钮，造成不必要的请求。
+
+c语言教学平台那个笔记管理那块搜索笔记输入框用的防抖，用第三方库lodash实现的
+:::
 11. vue2响应式原理有什么缺陷
+::: details 点击查看
+vue2的响应式原理是基于Object.defineProperty()实现的，
+1. 不能检测到对象属性的添加和删除。
+2. 不能检测到数组索引和长度的变化。
+3. 性能开销大
+4. 对Map,Set等新的数据结构支持不足
+:::
 12. vue3的出现解决什么问题
+::: details 点击查看
+一般vue2有啥缺陷那vue3就解决了啥问题
+:::
 13. vueRouter有哪些API
+::: details 点击查看
+useRouter，useRoute
+:::
 14. 路由的hash模式和history模式有什么区别
+::: details 点击查看
+1. hash模式：使用 URL 的 hash 来模拟一个完整的 URL，于是当 URL 改变时，页面不会重新加载。
+2. history模式：使用 HTML5 提供的 history API 来实现 URL 的改变，不会刷新页面。
+:::
 15. vue2中created和mounted钩子函数有什么区别？操作dom在created还是mounted中执行？
-16. vModel是谁的语法糖
+看前面
+16. `vModel` 是谁的语法糖
+::: details 点击查看
+这是基础直接秒了
+`:modelValue` 和 `@update:modelValue`
+
+不过后来了解到，不同场景下是不同的答案，比如一些表单项，可能是 `:value` 和 `@input/@change` (总之是对应的事件)，在自定义组件里是 `:modelValue` 和 `@update:modelValue`
+:::
 17. nextTick是什么，干什么用的
+::: details 点击查看
+1. nextTick 是 Vue 提供的一个异步方法，用于在下次 DOM 更新循环结束之后执行延迟回调。
+2. 它的作用是在 DOM 更新完成后，执行一些需要依赖 DOM 渲染结果的操作，确保操作在正确的时机执行。比如操作更新后的DOM,访问更新后的DOM信息
+:::
 18. html有哪些缓存技术，sessionStorage和localStorage有什么区别？token你一般存在哪里
+
+美团面试问过了
+
 19. 什么是盒模型
+
+前面问过了
+
 20. 标准盒模型和IE模型有什么区别，怎么设置这两种模型
+
+看前面
+
 21. 怎么实现盒子居中
+::: details 点击查看
+1. 父元素设置display:flex; justify-content:center; align-items:center;
+2. 子元素设置position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);父元素设置position:reflect
+我就答上来这两个，但他好像也没问是水平居中还是垂直居中，，，那就是两种都居中吧
+:::
 
 > 我嘞个八股盛世啊
 
