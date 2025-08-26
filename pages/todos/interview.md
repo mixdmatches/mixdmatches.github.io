@@ -1,0 +1,61 @@
+## 面试手写清单
+
+- [x] DFS 与 BFS 遍历
+
+- [ ] 发布订阅
+- [x] 防抖
+- [x] 节流
+- [ ] 浅拷贝
+- [ ] JSON拷贝
+- [ ] 递归拷贝
+- [ ] messageChannel 拷贝
+- [ ] structuredClone拷贝
+- [ ] 手写apply
+- [ ] 手写call
+- [ ] 手写bind
+- [ ] 手写 Map
+- [ ] 手写 forEach (无返回值)
+- [ ] 手写filter
+- [ ] 手写reduce
+- [ ] 手写数组,对象扁平
+- [ ] 判断对象是否相同
+- [ ] 对象去重
+- [ ] 手写new
+- [ ] new.target
+- [ ] 手写create
+- [ ] 继承几种方式
+- [ ] 原型链继承
+- [ ] 盗用构造函数
+- [ ] 原型链 + 构造函数
+- [ ] create
+- [ ] 盗用构造函数 + create
+- [ ] extends (最优)
+- [ ] 手写instanceof
+- [ ] 了解symbol
+- [ ] 手写instanceof
+- [ ] isPrototypeOf
+- [ ] 了解iterator
+- [ ] 了解Generator
+- [ ] 手写 async
+- [x] 手写Promise all
+- [ ] 手写Promise race
+- [ ] 手写PromiseAPI any
+- [x] 手写Promise allsettled
+- [ ] 手写控制并发
+- [ ] 手写红绿灯实现
+- [ ] 手写函数柯里化
+- [ ] 子树添加父 ID
+- [ ] 数组转树
+- [ ] 冒泡排序手写 sort
+- [ ] 快排
+- [ ] 队排
+- [ ] 乱序排
+- [ ] 千位数分割
+- [ ] 大写转驼峰
+- [ ] 驼峰转大写
+- [ ] 解析 URL
+- [ ] 手写hash
+- [ ] 手写history
+- [ ] 手写defineProperty
+- [ ] 手写proxy手写vue响应式
+- [ ] setTimeOut 实现 setInterval
