@@ -1,9 +1,14 @@
 ---
 title: 实现一个分页组件
 date: 2025-08-27
+updated: 2025-09-18
 categories:
   - 前端
 ---
+
+**已更新，pagination 组件已添加到 FanUI 组件库**
+
+[FanUI-pagination](https://github.com/mixdmatches/FanUI/tree/main/packages/components/pagination)
 
 ## 背景
 

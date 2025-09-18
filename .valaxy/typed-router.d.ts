@@ -29,12 +29,16 @@ declare module 'vue-router/auto-routes' {
     '/musics/': RouteRecordInfo<'/musics/', '/musics', Record<never, never>, Record<never, never>>,
     '/page/[page]': RouteRecordInfo<'/page/[page]', '/page/:page', { page: ParamValue<true> }, { page: ParamValue<false> }>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
+    '/posts/algorithm': RouteRecordInfo<'/posts/algorithm', '/posts/algorithm', Record<never, never>, Record<never, never>>,
     '/posts/event-loop': RouteRecordInfo<'/posts/event-loop', '/posts/event-loop', Record<never, never>, Record<never, never>>,
-    '/posts/hello-valaxy': RouteRecordInfo<'/posts/hello-valaxy', '/posts/hello-valaxy', Record<never, never>, Record<never, never>>,
+    '/posts/pageComponent': RouteRecordInfo<'/posts/pageComponent', '/posts/pageComponent', Record<never, never>, Record<never, never>>,
     '/posts/swiper': RouteRecordInfo<'/posts/swiper', '/posts/swiper', Record<never, never>, Record<never, never>>,
     '/posts/total-interview': RouteRecordInfo<'/posts/total-interview', '/posts/total-interview', Record<never, never>, Record<never, never>>,
+    '/posts/tree': RouteRecordInfo<'/posts/tree', '/posts/tree', Record<never, never>, Record<never, never>>,
+    '/posts/watermark': RouteRecordInfo<'/posts/watermark', '/posts/watermark', Record<never, never>, Record<never, never>>,
     '/projects/': RouteRecordInfo<'/projects/', '/projects', Record<never, never>, Record<never, never>>,
     '/tags/': RouteRecordInfo<'/tags/', '/tags', Record<never, never>, Record<never, never>>,
+    '/todos/interview': RouteRecordInfo<'/todos/interview', '/todos/interview', Record<never, never>, Record<never, never>>,
   }
 
   /**
@@ -92,12 +96,16 @@ declare module 'vue-router/auto-routes' {
       routes: '/posts/'
       views: never
     }
+    'pages/posts/algorithm.md': {
+      routes: '/posts/algorithm'
+      views: never
+    }
     'pages/posts/event-loop.md': {
       routes: '/posts/event-loop'
       views: never
     }
-    'pages/posts/hello-valaxy.md': {
-      routes: '/posts/hello-valaxy'
+    'pages/posts/pageComponent.md': {
+      routes: '/posts/pageComponent'
       views: never
     }
     'pages/posts/swiper.md': {
@@ -108,12 +116,24 @@ declare module 'vue-router/auto-routes' {
       routes: '/posts/total-interview'
       views: never
     }
+    'pages/posts/tree.md': {
+      routes: '/posts/tree'
+      views: never
+    }
+    'pages/posts/watermark.md': {
+      routes: '/posts/watermark'
+      views: never
+    }
     'pages/projects/index.md': {
       routes: '/projects/'
       views: never
     }
     'pages/tags/index.md': {
       routes: '/tags/'
+      views: never
+    }
+    'pages/todos/interview.md': {
+      routes: '/todos/interview'
       views: never
     }
   }
