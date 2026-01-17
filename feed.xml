@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>下饭小窝</title>
+        <link>https://mixdmatches.github.io/</link>
+        <description>无限进步</description>
+        <lastBuildDate>Sat, 17 Jan 2026 07:43:19 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <image>
+            <title>下饭小窝</title>
+            <url>https://mixdmatches.github.io/images/avatar.png</url>
+            <link>https://mixdmatches.github.io/</link>
+        </image>
+        <copyright>CC BY-NC-SA 4.0 2026 © 陈下饭</copyright>
+        <atom:link href="https://mixdmatches.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[实现一个水印组件，含防篡改功能]]></title>
+            <link>https://mixdmatches.github.io/posts/watermark</link>
+            <guid isPermaLink="false">https://mixdmatches.github.io/posts/watermark</guid>
+            <pubDate>Sat, 17 Jan 2026 07:42:21 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>1.背景</h2>
+<p>最近用 vue3 重构的一个 jsp 的老项目里需要实现满屏的水印效果，老项目里是没有实现防篡改功能的，在浏览器控制台都可以直接删除水印元素，有跟没有一样，我们用 vue3 写个新的</p>
+<br/><p>访问 <a href="https://mixdmatches.github.io/posts/watermark" target="_blank">https://mixdmatches.github.io/posts/watermark</a> 阅读全文。</p>]]></content:encoded>
+            <author>1919600547@qq.com (陈下饭)</author>
+        </item>
+        <item>
+            <title><![CDATA[面经大总结]]></title>
+            <link>https://mixdmatches.github.io/posts/total-interview</link>
+            <guid isPermaLink="false">https://mixdmatches.github.io/posts/total-interview</guid>
+            <pubDate>Sat, 17 Jan 2026 07:42:21 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>第九次面试-2025-11月21日-哈啰两轮共享 30min</h2>
+<ol>
+<li>实习做了哪些事</li>
+<li>vue2和vue3的区别</li>
+<li>盒模型</li>
+<li>浏览器渲染页面过程</li>
+<li>健康南京app登陆注册功能怎么</li>
+</ol>
+<br/><p>访问 <a href="https://mixdmatches.github.io/posts/total-interview" target="_blank">https://mixdmatches.github.io/posts/total-interview</a> 阅读全文。</p>]]></content:encoded>
+            <author>1919600547@qq.com (陈下饭)</author>
+        </item>
+        <item>
+            <title><![CDATA[树形控件]]></title>
+            <link>https://mixdmatches.github.io/posts/tree</link>
+            <guid isPermaLink="false">https://mixdmatches.github.io/posts/tree</guid>
+            <pubDate>Sat, 17 Jan 2026 07:42:21 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>树形控件</h2>
+<p>先贴代码：</p>
+<p>treeNode:</p>
+<pre><code class="language-vue">&lt;script setup lang=&quot;ts&quot;&gt;
+import { computed } from 'vue'
+
+interf</code></pre>
+<br/><p>访问 <a href="https://mixdmatches.github.io/posts/tree" target="_blank">https://mixdmatches.github.io/posts/tree</a> 阅读全文。</p>]]></content:encoded>
+            <author>1919600547@qq.com (陈下饭)</author>
+        </item>
+        <item>
+            <title><![CDATA[实现一个分页组件]]></title>
+            <link>https://mixdmatches.github.io/posts/pageComponent</link>
+            <guid isPermaLink="false">https://mixdmatches.github.io/posts/pageComponent</guid>
+            <pubDate>Thu, 18 Sep 2025 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<p><strong>已更新，pagination 组件已添加到 FanUI 组件库</strong></p>
+<p>[FanUI-pagination](<a href="https://github.com/mixdmatches/FanUI/tree/m">https://github.com/mixdmatches/FanUI/tree/m</a></p>
+<br/><p>访问 <a href="https://mixdmatches.github.io/posts/pageComponent" target="_blank">https://mixdmatches.github.io/posts/pageComponent</a> 阅读全文。</p>]]></content:encoded>
+            <author>1919600547@qq.com (陈下饭)</author>
+        </item>
+        <item>
+            <title><![CDATA[关于事件循环]]></title>
+            <link>https://mixdmatches.github.io/posts/event-loop</link>
+            <guid isPermaLink="false">https://mixdmatches.github.io/posts/event-loop</guid>
+            <pubDate>Mon, 25 Aug 2025 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<h3>前言</h3>
+<p>关于这个事件循环，最初在慧策笔试的时候碰到过，美团一面的时候也被拷打过，面试官建议我再多去了解一下，所以写这篇文章加深一下对事件循环的理解</p>
+<h3>事件循环概念</h3>
+<p>事件循环（Eve</p>
+<br/><p>访问 <a href="https://mixdmatches.github.io/posts/event-loop" target="_blank">https://mixdmatches.github.io/posts/event-loop</a> 阅读全文。</p>]]></content:encoded>
+            <author>1919600547@qq.com (陈下饭)</author>
+        </item>
+        <item>
+            <title><![CDATA[用swiperjs v11.x实现轮播图效果]]></title>
+            <link>https://mixdmatches.github.io/posts/swiper</link>
+            <guid isPermaLink="false">https://mixdmatches.github.io/posts/swiper</guid>
+            <pubDate>Wed, 20 Aug 2025 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>1. 前言</h2>
+<p>最近公司给了我一个任务是用vue重构一个很老的jsp项目，页面样式是定制的，不能用组件库，里面的轮播图那就得自己实现了。这里我用swiper实现</p>
+<h2>2. 效果</h2>
+<ol>
+<li>纯</li>
+</ol>
+<br/><p>访问 <a href="https://mixdmatches.github.io/posts/swiper" target="_blank">https://mixdmatches.github.io/posts/swiper</a> 阅读全文。</p>]]></content:encoded>
+            <author>1919600547@qq.com (陈下饭)</author>
+        </item>
+    </channel>
+</rss>

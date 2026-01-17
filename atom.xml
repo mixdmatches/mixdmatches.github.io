@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mixdmatches.github.io/</id>
+    <title>下饭小窝</title>
+    <updated>2026-01-17T07:43:19.948Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>陈下饭</name>
+        <email>1919600547@qq.com</email>
+        <uri>https://valaxy.site</uri>
+    </author>
+    <link rel="alternate" href="https://mixdmatches.github.io/"/>
+    <link rel="self" href="https://mixdmatches.github.io/atom.xml"/>
+    <subtitle>无限进步</subtitle>
+    <logo>https://mixdmatches.github.io/images/avatar.png</logo>
+    <icon>https://mixdmatches.github.io/favicon.svg</icon>
+    <rights>CC BY-NC-SA 4.0 2026 © 陈下饭</rights>
+    <entry>
+        <title type="html"><![CDATA[实现一个水印组件，含防篡改功能]]></title>
+        <id>https://mixdmatches.github.io/posts/watermark</id>
+        <link href="https://mixdmatches.github.io/posts/watermark"/>
+        <updated>2025-08-29T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>1.背景</h2>
+<p>最近用 vue3 重构的一个 jsp 的老项目里需要实现满屏的水印效果，老项目里是没有实现防篡改功能的，在浏览器控制台都可以直接删除水印元素，有跟没有一样，我们用 vue3 写个新的</p>
+<br/><p>访问 <a href="https://mixdmatches.github.io/posts/watermark" target="_blank">https://mixdmatches.github.io/posts/watermark</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>陈下饭</name>
+            <email>1919600547@qq.com</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2026-01-17T07:42:21.607Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[面经大总结]]></title>
+        <id>https://mixdmatches.github.io/posts/total-interview</id>
+        <link href="https://mixdmatches.github.io/posts/total-interview"/>
+        <updated>2025-08-25T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>第九次面试-2025-11月21日-哈啰两轮共享 30min</h2>
+<ol>
+<li>实习做了哪些事</li>
+<li>vue2和vue3的区别</li>
+<li>盒模型</li>
+<li>浏览器渲染页面过程</li>
+<li>健康南京app登陆注册功能怎么</li>
+</ol>
+<br/><p>访问 <a href="https://mixdmatches.github.io/posts/total-interview" target="_blank">https://mixdmatches.github.io/posts/total-interview</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>陈下饭</name>
+            <email>1919600547@qq.com</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2026-01-17T07:42:21.606Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[树形控件]]></title>
+        <id>https://mixdmatches.github.io/posts/tree</id>
+        <link href="https://mixdmatches.github.io/posts/tree"/>
+        <updated>2025-08-27T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>树形控件</h2>
+<p>先贴代码：</p>
+<p>treeNode:</p>
+<pre><code class="language-vue">&lt;script setup lang=&quot;ts&quot;&gt;
+import { computed } from 'vue'
+
+interf</code></pre>
+<br/><p>访问 <a href="https://mixdmatches.github.io/posts/tree" target="_blank">https://mixdmatches.github.io/posts/tree</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>陈下饭</name>
+            <email>1919600547@qq.com</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2026-01-17T07:42:21.606Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[实现一个分页组件]]></title>
+        <id>https://mixdmatches.github.io/posts/pageComponent</id>
+        <link href="https://mixdmatches.github.io/posts/pageComponent"/>
+        <updated>2025-08-27T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>已更新，pagination 组件已添加到 FanUI 组件库</strong></p>
+<p>[FanUI-pagination](<a href="https://github.com/mixdmatches/FanUI/tree/m">https://github.com/mixdmatches/FanUI/tree/m</a></p>
+<br/><p>访问 <a href="https://mixdmatches.github.io/posts/pageComponent" target="_blank">https://mixdmatches.github.io/posts/pageComponent</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>陈下饭</name>
+            <email>1919600547@qq.com</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-09-18T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于事件循环]]></title>
+        <id>https://mixdmatches.github.io/posts/event-loop</id>
+        <link href="https://mixdmatches.github.io/posts/event-loop"/>
+        <updated>2025-08-15T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h3>前言</h3>
+<p>关于这个事件循环，最初在慧策笔试的时候碰到过，美团一面的时候也被拷打过，面试官建议我再多去了解一下，所以写这篇文章加深一下对事件循环的理解</p>
+<h3>事件循环概念</h3>
+<p>事件循环（Eve</p>
+<br/><p>访问 <a href="https://mixdmatches.github.io/posts/event-loop" target="_blank">https://mixdmatches.github.io/posts/event-loop</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>陈下饭</name>
+            <email>1919600547@qq.com</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-08-25T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[用swiperjs v11.x实现轮播图效果]]></title>
+        <id>https://mixdmatches.github.io/posts/swiper</id>
+        <link href="https://mixdmatches.github.io/posts/swiper"/>
+        <updated>2025-08-18T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>1. 前言</h2>
+<p>最近公司给了我一个任务是用vue重构一个很老的jsp项目，页面样式是定制的，不能用组件库，里面的轮播图那就得自己实现了。这里我用swiper实现</p>
+<h2>2. 效果</h2>
+<ol>
+<li>纯</li>
+</ol>
+<br/><p>访问 <a href="https://mixdmatches.github.io/posts/swiper" target="_blank">https://mixdmatches.github.io/posts/swiper</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>陈下饭</name>
+            <email>1919600547@qq.com</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-08-20T00:00:00.000Z</published>
+    </entry>
+</feed>

@@ -1,0 +1,86 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "下饭小窝",
+    "home_page_url": "https://mixdmatches.github.io/",
+    "feed_url": "https://mixdmatches.github.io/feed.json",
+    "description": "无限进步",
+    "icon": "https://mixdmatches.github.io/images/avatar.png",
+    "author": {
+        "name": "陈下饭",
+        "url": "https://valaxy.site"
+    },
+    "items": [
+        {
+            "id": "https://mixdmatches.github.io/posts/watermark",
+            "content_html": "<h2>1.背景</h2>\n<p>最近用 vue3 重构的一个 jsp 的老项目里需要实现满屏的水印效果，老项目里是没有实现防篡改功能的，在浏览器控制台都可以直接删除水印元素，有跟没有一样，我们用 vue3 写个新的</p>\n<br/><p>访问 <a href=\"https://mixdmatches.github.io/posts/watermark\" target=\"_blank\">https://mixdmatches.github.io/posts/watermark</a> 阅读全文。</p>",
+            "url": "https://mixdmatches.github.io/posts/watermark",
+            "title": "实现一个水印组件，含防篡改功能",
+            "date_modified": "2025-08-29T00:00:00.000Z",
+            "date_published": "2026-01-17T07:42:21.607Z",
+            "author": {
+                "name": "陈下饭",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "https://mixdmatches.github.io/posts/total-interview",
+            "content_html": "<h2>第九次面试-2025-11月21日-哈啰两轮共享 30min</h2>\n<ol>\n<li>实习做了哪些事</li>\n<li>vue2和vue3的区别</li>\n<li>盒模型</li>\n<li>浏览器渲染页面过程</li>\n<li>健康南京app登陆注册功能怎么</li>\n</ol>\n<br/><p>访问 <a href=\"https://mixdmatches.github.io/posts/total-interview\" target=\"_blank\">https://mixdmatches.github.io/posts/total-interview</a> 阅读全文。</p>",
+            "url": "https://mixdmatches.github.io/posts/total-interview",
+            "title": "面经大总结",
+            "date_modified": "2025-08-25T00:00:00.000Z",
+            "date_published": "2026-01-17T07:42:21.606Z",
+            "author": {
+                "name": "陈下饭",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "https://mixdmatches.github.io/posts/tree",
+            "content_html": "<h2>树形控件</h2>\n<p>先贴代码：</p>\n<p>treeNode:</p>\n<pre><code class=\"language-vue\">&lt;script setup lang=&quot;ts&quot;&gt;\nimport { computed } from 'vue'\n\ninterf</code></pre>\n<br/><p>访问 <a href=\"https://mixdmatches.github.io/posts/tree\" target=\"_blank\">https://mixdmatches.github.io/posts/tree</a> 阅读全文。</p>",
+            "url": "https://mixdmatches.github.io/posts/tree",
+            "title": "树形控件",
+            "date_modified": "2025-08-27T00:00:00.000Z",
+            "date_published": "2026-01-17T07:42:21.606Z",
+            "author": {
+                "name": "陈下饭",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "https://mixdmatches.github.io/posts/pageComponent",
+            "content_html": "<p><strong>已更新，pagination 组件已添加到 FanUI 组件库</strong></p>\n<p>[FanUI-pagination](<a href=\"https://github.com/mixdmatches/FanUI/tree/m\">https://github.com/mixdmatches/FanUI/tree/m</a></p>\n<br/><p>访问 <a href=\"https://mixdmatches.github.io/posts/pageComponent\" target=\"_blank\">https://mixdmatches.github.io/posts/pageComponent</a> 阅读全文。</p>",
+            "url": "https://mixdmatches.github.io/posts/pageComponent",
+            "title": "实现一个分页组件",
+            "date_modified": "2025-08-27T00:00:00.000Z",
+            "date_published": "2025-09-18T00:00:00.000Z",
+            "author": {
+                "name": "陈下饭",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "https://mixdmatches.github.io/posts/event-loop",
+            "content_html": "<h3>前言</h3>\n<p>关于这个事件循环，最初在慧策笔试的时候碰到过，美团一面的时候也被拷打过，面试官建议我再多去了解一下，所以写这篇文章加深一下对事件循环的理解</p>\n<h3>事件循环概念</h3>\n<p>事件循环（Eve</p>\n<br/><p>访问 <a href=\"https://mixdmatches.github.io/posts/event-loop\" target=\"_blank\">https://mixdmatches.github.io/posts/event-loop</a> 阅读全文。</p>",
+            "url": "https://mixdmatches.github.io/posts/event-loop",
+            "title": "关于事件循环",
+            "date_modified": "2025-08-15T00:00:00.000Z",
+            "date_published": "2025-08-25T00:00:00.000Z",
+            "author": {
+                "name": "陈下饭",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "https://mixdmatches.github.io/posts/swiper",
+            "content_html": "<h2>1. 前言</h2>\n<p>最近公司给了我一个任务是用vue重构一个很老的jsp项目，页面样式是定制的，不能用组件库，里面的轮播图那就得自己实现了。这里我用swiper实现</p>\n<h2>2. 效果</h2>\n<ol>\n<li>纯</li>\n</ol>\n<br/><p>访问 <a href=\"https://mixdmatches.github.io/posts/swiper\" target=\"_blank\">https://mixdmatches.github.io/posts/swiper</a> 阅读全文。</p>",
+            "url": "https://mixdmatches.github.io/posts/swiper",
+            "title": "用swiperjs v11.x实现轮播图效果",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "date_published": "2025-08-20T00:00:00.000Z",
+            "author": {
+                "name": "陈下饭",
+                "url": "https://valaxy.site"
+            }
+        }
+    ]
+}
