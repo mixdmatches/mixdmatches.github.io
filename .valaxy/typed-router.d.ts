@@ -29,7 +29,6 @@ declare module 'vue-router/auto-routes' {
     '/musics/': RouteRecordInfo<'/musics/', '/musics', Record<never, never>, Record<never, never>>,
     '/page/[page]': RouteRecordInfo<'/page/[page]', '/page/:page', { page: ParamValue<true> }, { page: ParamValue<false> }>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
-    '/posts/algorithm': RouteRecordInfo<'/posts/algorithm', '/posts/algorithm', Record<never, never>, Record<never, never>>,
     '/posts/event-loop': RouteRecordInfo<'/posts/event-loop', '/posts/event-loop', Record<never, never>, Record<never, never>>,
     '/posts/pageComponent': RouteRecordInfo<'/posts/pageComponent', '/posts/pageComponent', Record<never, never>, Record<never, never>>,
     '/posts/swiper': RouteRecordInfo<'/posts/swiper', '/posts/swiper', Record<never, never>, Record<never, never>>,
@@ -94,10 +93,6 @@ declare module 'vue-router/auto-routes' {
     }
     'node_modules/.pnpm/valaxy-theme-yun@0.26.2_vue@3.5.18_typescript@5.9.2_/node_modules/valaxy-theme-yun/pages/posts/index.vue': {
       routes: '/posts/'
-      views: never
-    }
-    'pages/posts/algorithm.md': {
-      routes: '/posts/algorithm'
       views: never
     }
     'pages/posts/event-loop.md': {
