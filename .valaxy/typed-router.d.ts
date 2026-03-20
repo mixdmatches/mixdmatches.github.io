@@ -34,6 +34,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/swiper': RouteRecordInfo<'/posts/swiper', '/posts/swiper', Record<never, never>, Record<never, never>>,
     '/posts/total-interview': RouteRecordInfo<'/posts/total-interview', '/posts/total-interview', Record<never, never>, Record<never, never>>,
     '/posts/tree': RouteRecordInfo<'/posts/tree', '/posts/tree', Record<never, never>, Record<never, never>>,
+    '/posts/vue_error': RouteRecordInfo<'/posts/vue_error', '/posts/vue_error', Record<never, never>, Record<never, never>>,
     '/posts/watermark': RouteRecordInfo<'/posts/watermark', '/posts/watermark', Record<never, never>, Record<never, never>>,
     '/projects/': RouteRecordInfo<'/projects/', '/projects', Record<never, never>, Record<never, never>>,
     '/tags/': RouteRecordInfo<'/tags/', '/tags', Record<never, never>, Record<never, never>>,
@@ -113,6 +114,10 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/posts/tree.md': {
       routes: '/posts/tree'
+      views: never
+    }
+    'pages/posts/vue_error.md': {
+      routes: '/posts/vue_error'
       views: never
     }
     'pages/posts/watermark.md': {
