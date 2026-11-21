@@ -1,3 +1,12 @@
+# Valaxy 生成的页面模块会在项目根目录直接 import vue-router / unplugin-vue-router /
+# @unocss/reset 等传递依赖，因此需要扁平化提升到根 node_modules。
+shamefullyHoist: true
+
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  vue-demi: true
+
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - esbuild
